@@ -1,0 +1,332 @@
+/*----------- GENERAL -----------*/
+* { /* This thing applies it's styles to all elements.*/
+    font-family: roboto, sans-serif;
+}
+
+body {  /*only affects the body, not the elements inside*/
+    margin: 0; /*For full screen sections*/
+    background-color: var(--bgColor); 
+    color: var(--textColor); 
+}
+
+:root {
+    --bgColor: #ffffff;
+    --textColor: #1C1539;
+    --boxColor: #707070;
+    --headingColor: #301f71;
+}
+
+@font-face {
+    font-family: sego;
+    src: url(SEGO.ttf);
+}
+
+h1 {
+    font-family: sego;
+}
+
+h2 {
+    font-family: sego;
+    font-size: 40px;
+    color: var(--headingColor)
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 20px;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid var(--textColor);
+}
+
+.subheading {
+    font-weight: 500;
+    margin-bottom: -15px;
+}
+
+/*----------- NAVIGATION -----------*/
+header .brand-container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    text-align: center;
+    background-color: var(--textColor);
+}
+
+header{
+    border: 2px solid var(--textColor);
+    height: auto;
+}
+
+header img{
+    width: 75px;
+    height: 100%;
+    background: none;
+}
+
+.brand-container p{
+    font-family: sego;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    background: none;
+}
+
+.nav {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/*----------- TITLE -----------*/
+.title-section {
+    background-color: var(--textColor);
+    border: 2px solid var(--textColor);
+    text-align: center;
+    padding: 20px;
+    height: 90vh;
+    margin-bottom: 50px;
+}
+
+.title-section h1{
+    text-transform: uppercase;
+    text-align: center;
+    background: none;
+    font-size: 100px;
+    color: #fff;
+    margin-top: 200px;
+}
+
+.title-section a{
+    background: none;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #fff;
+}
+
+.title-section a:hover{
+    color: var(--textColor);
+    background-color: white;
+}
+
+/*----------- FEATURES -----------*/
+.features-section {
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 90vh;
+    margin-bottom: 100px;
+}
+
+.card {
+    line-height: 35px;
+    margin-bottom: 30px;
+    padding-right: 400px;
+}
+
+/*----------- DEMO -----------*/
+.demo-section {
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 90vh;
+    margin-bottom: 150px;
+}
+
+.box {
+    border: 1.5px solid var(--boxColor);
+    margin-right: 300px;
+    margin-bottom: 30px;
+    padding: 10px;
+    line-height: 30px;
+    padding-right: 100px;
+}
+
+/*----------- PRICING -----------*/
+.pricing-section {
+    margin-right: 100px;
+    margin-left: 100px;
+    height: 90vh;
+}
+
+.pricing-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+
+.pricing-card {
+    border: 1.5px solid var(--boxColor);
+    margin-bottom: 30px;
+    padding: 20px;
+    line-height: 20px;
+}
+
+.pricing-section a {
+    color: var(--boxColor);
+    text-decoration: underline;
+}
+
+/*----------- ACTION -----------*/
+.action-section {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.action-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.action-button a{
+    border: 1.5px solid var(--textColor);
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    color: var(--textColor);
+}
+
+.action-button :hover{
+    color: white;
+    background-color: var(--textColor);
+}
+
+/*----------- FOOTER -----------*/
+footer {
+    background-color: var(--textColor);
+    border: 2px solid var(--textColor);
+    padding: 20px;
+    height: 50vh;
+}
+
+.footer-wrapper {
+    margin-right: 100px;
+    margin-left: 100px;
+    background: none;
+    color: #fff;
+}
+
+.footer-wrapper p {
+    background: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    background: none;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.footer-container a{
+    background: none;
+    color: #fff;
+}
+
+.footer-box {
+    background: none;
+    color: #fff;
+}
+
+.footer-container a :hover{
+    text-decoration: underline;
+}
+
+/*--------- MEDIA QUERIES ---------*/
+@media only screen and (max-width: 800px) {
+
+    p {
+        font-size: 16px;
+    }
+
+    /*--------- TITLE ---------*/
+    .title-section h1{
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+
+    .title-section a{
+        background: none;
+        color: #fff;
+        padding: 5px;
+        border: 2px solid #fff;
+    }    
+
+    /*----------- FEATURES -----------*/
+    .features-section {
+        margin-right: 40px;
+        margin-left: 40px;
+        height: auto;
+    }
+
+    .card {
+        line-height: 20px;
+        margin-bottom: 30px;
+        padding-right: 30px;
+    }
+
+    /*----------- DEMO -----------*/
+    .demo-section {
+        margin-right: 40px;
+        margin-left: 40px;
+        height: auto;
+    }
+
+    .box {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        padding-right: 25px;
+    }
+    
+    /*----------- PRICING -----------*/
+    .pricing-section {
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+    }
+
+    .pricing-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    /*----------- ACTION -----------*/
+    .action-section {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .action-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 55px;
+    }
+
+    .action-button a{
+        font-size: 20px;
+    }
+
+    /*----------- FOOTER -----------*/
+    .footer-wrapper {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        background: none;
+        color: #fff;
+        padding-top: 50px;
+    }
+}
